@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap   
+PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"   
+"http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="person" type="com.cll.si.model.Person" />
+
+	<!-- 第一个 -->
+	<update id="sql_insert" parameterClass="person">
+		insert into
+			STUDENT(id,name,num,birthday)
+		values
+		(
+			#id#,
+			#name#,
+			#num#,
+			#birthday#
+		)
+	</update>
+</sqlMap>
